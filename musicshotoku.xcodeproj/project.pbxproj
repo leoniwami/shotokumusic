@@ -20,6 +20,12 @@
 		B86720C21E40A6620031749B /* koi.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B86720C11E40A6620031749B /* koi.mp3 */; };
 		B86720C41E40ACB60031749B /* nanimono.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B86720C31E40ACB60031749B /* nanimono.mp3 */; };
 		B86720C61E40ACBE0031749B /* zenzen.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B86720C51E40ACBE0031749B /* zenzen.mp3 */; };
+		B875178F1EC1D8FF0000A68F /* shirakaba.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B875178E1EC1D8FF0000A68F /* shirakaba.jpg */; };
+		B87517911EC1D9880000A68F /* YouTube-icon-full_color.png in Resources */ = {isa = PBXBuildFile; fileRef = B87517901EC1D9880000A68F /* YouTube-icon-full_color.png */; };
+		B87517951EC1DA290000A68F /* sns.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B87517941EC1DA290000A68F /* sns.jpg */; };
+		B87517971EC1DA480000A68F /* piko.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B87517961EC1DA480000A68F /* piko.mp3 */; };
+		B87517991EC1DB2C0000A68F /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = B87517981EC1DB2C0000A68F /* pause.png */; };
+		B87DDEB61E5C4CA700E228DA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B87DDEB51E5C4CA700E228DA /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +65,12 @@
 		B86720C11E40A6620031749B /* koi.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = koi.mp3; sourceTree = "<group>"; };
 		B86720C31E40ACB60031749B /* nanimono.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = nanimono.mp3; sourceTree = "<group>"; };
 		B86720C51E40ACBE0031749B /* zenzen.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = zenzen.mp3; sourceTree = "<group>"; };
+		B875178E1EC1D8FF0000A68F /* shirakaba.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = shirakaba.jpg; sourceTree = "<group>"; };
+		B87517901EC1D9880000A68F /* YouTube-icon-full_color.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "YouTube-icon-full_color.png"; sourceTree = "<group>"; };
+		B87517941EC1DA290000A68F /* sns.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sns.jpg; sourceTree = "<group>"; };
+		B87517961EC1DA480000A68F /* piko.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = piko.mp3; sourceTree = "<group>"; };
+		B87517981EC1DB2C0000A68F /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause.png; sourceTree = "<group>"; };
+		B87DDEB51E5C4CA700E228DA /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B87DDEB61E5C4CA700E228DA /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +106,7 @@
 				B86720A01E409C740031749B /* musicshotokuTests */,
 				B86720AB1E409C740031749B /* musicshotokuUITests */,
 				B867208A1E409C730031749B /* Products */,
+				B87DDEB41E5C4CA700E228DA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -115,6 +129,7 @@
 				B86720931E409C730031749B /* Assets.xcassets */,
 				B86720951E409C730031749B /* LaunchScreen.storyboard */,
 				B86720981E409C730031749B /* Info.plist */,
+				B875178E1EC1D8FF0000A68F /* shirakaba.jpg */,
 				B86720C71E40ACCA0031749B /* music */,
 				B86720BA1E40A2550031749B /* jacket */,
 			);
@@ -142,9 +157,12 @@
 		B86720BA1E40A2550031749B /* jacket */ = {
 			isa = PBXGroup;
 			children = (
+				B87517941EC1DA290000A68F /* sns.jpg */,
+				B87517981EC1DB2C0000A68F /* pause.png */,
 				B86720BB1E40A2550031749B /* koi-jacket.jpg */,
 				B86720BC1E40A2550031749B /* nanimono-jacket.jpg */,
 				B86720BD1E40A2550031749B /* zenzen-jacket.png */,
+				B87517901EC1D9880000A68F /* YouTube-icon-full_color.png */,
 			);
 			path = jacket;
 			sourceTree = "<group>";
@@ -155,8 +173,17 @@
 				B86720C11E40A6620031749B /* koi.mp3 */,
 				B86720C31E40ACB60031749B /* nanimono.mp3 */,
 				B86720C51E40ACBE0031749B /* zenzen.mp3 */,
+				B87517961EC1DA480000A68F /* piko.mp3 */,
 			);
 			name = music;
+			sourceTree = "<group>";
+		};
+		B87DDEB41E5C4CA700E228DA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B87DDEB51E5C4CA700E228DA /* AVFoundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,9 +299,14 @@
 				B86720971E409C730031749B /* LaunchScreen.storyboard in Resources */,
 				B86720C21E40A6620031749B /* koi.mp3 in Resources */,
 				B86720941E409C730031749B /* Assets.xcassets in Resources */,
+				B87517951EC1DA290000A68F /* sns.jpg in Resources */,
+				B87517911EC1D9880000A68F /* YouTube-icon-full_color.png in Resources */,
 				B86720C01E40A2550031749B /* zenzen-jacket.png in Resources */,
+				B87517991EC1DB2C0000A68F /* pause.png in Resources */,
+				B87517971EC1DA480000A68F /* piko.mp3 in Resources */,
 				B86720921E409C730031749B /* Main.storyboard in Resources */,
 				B86720C61E40ACBE0031749B /* zenzen.mp3 in Resources */,
+				B875178F1EC1D8FF0000A68F /* shirakaba.jpg in Resources */,
 				B86720BE1E40A2550031749B /* koi-jacket.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -546,6 +578,7 @@
 				B86720B31E409C740031749B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B86720B41E409C740031749B /* Build configuration list for PBXNativeTarget "musicshotokuTests" */ = {
 			isa = XCConfigurationList;
@@ -554,6 +587,7 @@
 				B86720B61E409C740031749B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B86720B71E409C740031749B /* Build configuration list for PBXNativeTarget "musicshotokuUITests" */ = {
 			isa = XCConfigurationList;
@@ -562,6 +596,7 @@
 				B86720B91E409C740031749B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -18,37 +18,60 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="shirakaba.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="KPB-aE-mWn">
+                                <frame key="frameInset" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="utm-kI-tEl">
+                                <frame key="frameInset" minX="137" minY="96" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="sns.jpg"/>
+                                <connections>
+                                    <action selector="play1" destination="BYZ-38-t0r" eventType="touchUpInside" id="jmj-0Q-BKP"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wwf-3H-lZw">
-                                <frame key="frameInset" minX="137" minY="162" width="100" height="100"/>
+                                <frame key="frameInset" minX="39" minY="283" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="koi-jacket.jpg"/>
                                 <connections>
-                                    <action selector="koiplay" destination="BYZ-38-t0r" eventType="touchUpInside" id="6uV-b3-lan"/>
+                                    <action selector="play" destination="BYZ-38-t0r" eventType="touchUpInside" id="lWU-SG-9FP"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tuS-Xe-wuK">
-                                <frame key="frameInset" minX="46" minY="340" width="100" height="100"/>
+                                <frame key="frameInset" minX="237" minY="283" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="zenzen-jacket.png"/>
                                 <connections>
-                                    <action selector="zenzenplay" destination="BYZ-38-t0r" eventType="touchUpInside" id="wE1-LB-czU"/>
+                                    <action selector="play2" destination="BYZ-38-t0r" eventType="touchUpInside" id="RJr-17-NtY"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="utm-kI-tEl">
-                                <frame key="frameInset" minX="227" minY="340" width="100" height="100"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nls-iW-Fv1">
+                                <frame key="frameInset" minX="219" minY="496" width="117" height="117"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="nanimono-jacket.jpg"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="pause.png"/>
                                 <connections>
-                                    <action selector="nanimonoplay" destination="BYZ-38-t0r" eventType="touchUpInside" id="pDc-Aa-f74"/>
+                                    <action selector="pausemusic" destination="BYZ-38-t0r" eventType="touchUpInside" id="T7T-vJ-Kqu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ma5-Aj-Gge">
+                                <frame key="frameInset" minX="38" minY="505" width="140" height="98"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="YouTube-icon-full_color.png"/>
+                                <connections>
+                                    <action selector="allplay" destination="BYZ-38-t0r" eventType="touchUpInside" id="RzZ-ad-mTz"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
-                        <outlet property="koi" destination="Wwf-3H-lZw" id="0tT-Ca-ffg"/>
-                        <outlet property="nanimono" destination="utm-kI-tEl" id="P5Q-wr-WMs"/>
-                        <outlet property="zenzen" destination="tuS-Xe-wuK" id="hnZ-Vg-xeK"/>
+                        <outlet property="all" destination="Ma5-Aj-Gge" id="rap-lS-Sgw"/>
+                        <outlet property="koi" destination="Wwf-3H-lZw" id="5b0-JL-sda"/>
+                        <outlet property="pause" destination="nls-iW-Fv1" id="aqz-Pu-JY0"/>
+                        <outlet property="piko" destination="utm-kI-tEl" id="fHz-2O-pbs"/>
+                        <outlet property="zenzen" destination="tuS-Xe-wuK" id="56M-ah-r4d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -57,8 +80,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="YouTube-icon-full_color.png" width="1024" height="721"/>
         <image name="koi-jacket.jpg" width="320" height="319"/>
-        <image name="nanimono-jacket.jpg" width="528" height="470"/>
+        <image name="pause.png" width="300" height="300"/>
+        <image name="shirakaba.jpg" width="652" height="400"/>
+        <image name="sns.jpg" width="800" height="714"/>
         <image name="zenzen-jacket.png" width="596" height="600"/>
     </resources>
 </document>
