@@ -8,6 +8,7 @@
 
 import UIKit
 import AVFoundation
+import CoreMotion
 
 class ViewController: UIViewController ,AVAudioPlayerDelegate {
     
@@ -17,6 +18,12 @@ class ViewController: UIViewController ,AVAudioPlayerDelegate {
     @IBOutlet var piko: UIButton!
     @IBOutlet var all: UIButton!
     @IBOutlet var pause: UIButton!
+    
+    var accelerationX: Double!
+    var accelerationY: Double!
+    var radian: Double!
+    
+    let motionManager = CMMotionManager()
     
     @IBAction func play() {
         playerArray[0].play()
@@ -63,8 +70,30 @@ class ViewController: UIViewController ,AVAudioPlayerDelegate {
             } else {
                 fatalError("Url is nil.")
             }
-            
+        
         }
+        
+        if motionManager.isAccelerometerAvailable {
+            motionManager.accelerometerUpdateInterval = 0.01
+            
+            motionManager.startAccelerometerUpdates(to: OperationQueue.current!, withHandler: { (data,error) in
+                
+                self.accelerationX = -(data?.acceleration.x)!
+                self.accelerationY = (data?.acceleration.y)!
+                
+                var r = atan2((data?.acceleration.y)!, (data?.acceleration.x)!)
+                if r < 0 {
+                    r = r + 2 * M_PI
+                }
+                self.radian = floor(r * 360 / (2 * M_PI))
+                
+                print(self.accelerationX)
+                print(self.accelerationY)
+                print(self.radian)
+                
+            })
+        }
+
         
         //        let url = Bundle.main.url(forResource: fileName, withExtension: fileType)
         //
