@@ -38,7 +38,7 @@ class ViewController: UIViewController ,AVAudioPlayerDelegate {
     @IBAction func allplay() {
         for i in 0 ..< playerArray.count {
             playerArray[i].play()
-        }
+        }  
     }
     
     @IBAction func pausemusic() {
