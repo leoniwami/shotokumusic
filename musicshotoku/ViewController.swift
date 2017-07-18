@@ -74,22 +74,27 @@ class ViewController: UIViewController ,AVAudioPlayerDelegate {
         }
         
         if motionManager.isAccelerometerAvailable {
-            motionManager.accelerometerUpdateInterval = 0.01
+            motionManager.accelerometerUpdateInterval = 0.1
             
             motionManager.startAccelerometerUpdates(to: OperationQueue.current!, withHandler: { (data,error) in
                 
                 self.accelerationX = -(data?.acceleration.x)!
                 self.accelerationY = (data?.acceleration.y)!
                 
-                var r = atan2((data?.acceleration.y)!, (data?.acceleration.x)!)
-                if r < 0 {
-                    r = r + 2 * M_PI
-                }
-                self.radian = floor(r * 360 / (2 * M_PI))
+//                var r = atan2((data?.acceleration.y)!, (data?.acceleration.x)!)
+//                if r < 0 {
+//                    r = r + 2 * M_PI
+//                }
+//                self.radian = floor(r * 360 / (2 * M_PI))
+                
+                self.playerArray[1].volume = Float((self.accelerationY + 1.0) / 2.0)
+                self.playerArray[0].volume = Float((self.accelerationX + 1.0) / 2.0)
+                self.playerArray[2].volume = Float((-self.accelerationX + 1.0) / 2.0)
+
                 
                 print(self.accelerationX)
                 print(self.accelerationY)
-                print(self.radian)
+//                print(self.radian)
                 
             })
         }
